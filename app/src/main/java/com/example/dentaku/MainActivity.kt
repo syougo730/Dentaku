@@ -2,6 +2,7 @@ package com.example.dentaku
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.Editable
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
@@ -21,7 +22,11 @@ class MainActivity : AppCompatActivity() {
                 if(result.text != null){
                     val calc = Calc((result.text).toString())
                     println("calc = ${calc.rpn_result}")
+                    result.setText(calc.rpn_result.toString())
                 }
+            }
+            "←" ->{
+                result.text = result.text.dropLast(1) as Editable?//1文字戻る
             }
             "C" -> result.text = null
             else -> {
