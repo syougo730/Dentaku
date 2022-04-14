@@ -40,7 +40,7 @@ class MainActivity : AppCompatActivity() {
                     "0"->{//まだ何も入力してないとき
                         when(button.text){
                             "-"-> result.text.append(button.text)
-                            "+","*","/"-> result.setText("0")
+                            "+","*","/",")"-> result.setText("0")
                             else-> result.setText(button.text)
                         }
                     }
