@@ -34,55 +34,55 @@
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
                 >
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    >
+                <Button
+                    android:id="@+id/button_ac"
+                    style="@style/button_light_land"
+                    android:layout_margin="1dp"
+                    android:layout_weight="3.05"
+                    android:onClick="onButtonClicked"
+                    android:text="@string/button_clear" />
+    <!--            <Button-->
+    <!--                android:id="@+id/button_par"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_margin="5dp"-->
+    <!--                android:onClick="onButtonClicked"-->
+    <!--                tools:ignore="OnClick"-->
+    <!--                android:text="@string/par"-->
+    <!--                android:layout_weight="1"-->
+    <!--                />-->
 
-                    <Button
-                        android:id="@+id/button_ac"
-                        style="@style/button_light"
-                        android:layout_margin="1dp"
-                        android:layout_weight="3.05"
-                        android:onClick="onButtonClicked"
-                        android:text="@string/button_clear" />
-                    <!--            <Button-->
-                    <!--                android:id="@+id/button_par"-->
-                    <!--                android:layout_width="wrap_content"-->
-                    <!--                android:layout_height="wrap_content"-->
-                    <!--                android:layout_margin="5dp"-->
-                    <!--                android:onClick="onButtonClicked"-->
-                    <!--                tools:ignore="OnClick"-->
-                    <!--                android:text="@string/par"-->
-                    <!--                android:layout_weight="1"-->
-                    <!--                />-->
+    <!--            <Button-->
+    <!--                android:id="@+id/button_plusminus"-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:layout_margin="5dp"-->
+    <!--                android:onClick="onButtonClicked"-->
+    <!--                tools:ignore="OnClick"-->
+    <!--                android:text="@string/plusminus"-->
+    <!--                android:layout_weight="1"-->
+    <!--                />-->
 
-                    <!--            <Button-->
-                    <!--                android:id="@+id/button_plusminus"-->
-                    <!--                android:layout_width="wrap_content"-->
-                    <!--                android:layout_height="wrap_content"-->
-                    <!--                android:layout_margin="5dp"-->
-                    <!--                android:onClick="onButtonClicked"-->
-                    <!--                tools:ignore="OnClick"-->
-                    <!--                android:text="@string/plusminus"-->
-                    <!--                android:layout_weight="1"-->
-                    <!--                />-->
-
-                    <Button
-                        android:id="@+id/button_back"
-                        style="@style/button_light"
-                        android:layout_margin="1dp"
-                        android:layout_weight="1"
-                        android:onClick="onButtonClicked"
-                        android:text="@string/back" />
-                </LinearLayout>
+                <Button
+                    android:id="@+id/button_back"
+                    style="@style/button_light_land"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:onClick="onButtonClicked"
+                    android:text="@string/back" />
+            </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -92,7 +92,7 @@
 
                     <Button
                         android:id="@+id/button_arch_start"
-                        style="@style/button_normal"
+                        style="@style/button_normal_land"
                         android:layout_margin="1dp"
                         android:layout_weight="1"
                         android:onClick="onButtonClicked"
@@ -100,7 +100,7 @@
 
                     <Button
                         android:id="@+id/button_arch_end"
-                        style="@style/button_normal"
+                        style="@style/button_normal_land"
                         android:layout_margin="1dp"
                         android:layout_weight="1"
                         android:onClick="onButtonClicked"
@@ -108,7 +108,7 @@
 
                     <Button
                         android:id="@+id/button_divide"
-                        style="@style/button_normal"
+                        style="@style/button_normal_land"
                         android:layout_margin="1dp"
                         android:layout_weight="1"
                         android:onClick="onButtonClicked"
@@ -116,7 +116,7 @@
 
                     <Button
                         android:id="@+id/button_times"
-                        style="@style/button_normal"
+                        style="@style/button_normal_land"
                         android:layout_margin="1dp"
                         android:layout_weight="1"
                         android:onClick="onButtonClicked"
@@ -132,7 +132,7 @@
 
                     <Button
                         android:id="@+id/button_7"
-                        style="@style/button_normal"
+                        style="@style/button_normal_land"
                         android:layout_margin="1dp"
                         android:layout_weight="1"
                         android:onClick="onButtonClicked"
@@ -140,7 +140,7 @@
 
                     <Button
                         android:id="@+id/button_8"
-                        style="@style/button_normal"
+                        style="@style/button_normal_land"
                         android:layout_margin="1dp"
                         android:layout_weight="1"
                         android:onClick="onButtonClicked"
@@ -148,7 +148,7 @@
 
                     <Button
                         android:id="@+id/button_9"
-                        style="@style/button_normal"
+                        style="@style/button_normal_land"
                         android:layout_margin="1dp"
                         android:layout_weight="1"
                         android:onClick="onButtonClicked"
@@ -156,7 +156,7 @@
 
                     <Button
                         android:id="@+id/button_minus"
-                        style="@style/button_normal"
+                        style="@style/button_normal_land"
                         android:layout_margin="1dp"
                         android:layout_weight="1"
                         android:onClick="onButtonClicked"
@@ -172,7 +172,7 @@
 
                     <Button
                         android:id="@+id/button_4"
-                        style="@style/button_normal"
+                        style="@style/button_normal_land"
                         android:layout_margin="1dp"
                         android:layout_weight="1"
                         android:onClick="onButtonClicked"
@@ -180,7 +180,7 @@
 
                     <Button
                         android:id="@+id/button_5"
-                        style="@style/button_normal"
+                        style="@style/button_normal_land"
                         android:layout_margin="1dp"
                         android:layout_weight="1"
                         android:onClick="onButtonClicked"
@@ -188,14 +188,14 @@
 
                     <Button
                         android:id="@+id/button_6"
-                        style="@style/button_normal"
+                        style="@style/button_normal_land"
                         android:layout_margin="1dp"
                         android:layout_weight="1"
                         android:onClick="onButtonClicked"
                         android:text="@string/button_6" />
                     <Button
                         android:id="@+id/button_plus"
-                        style="@style/button_normal"
+                        style="@style/button_normal_land"
                         android:layout_margin="1dp"
                         android:layout_weight="1"
                         android:onClick="onButtonClicked"
@@ -225,7 +225,7 @@
 
                             <Button
                                 android:id="@+id/button_1"
-                                style="@style/button_normal"
+                                style="@style/button_normal_land"
                                 android:layout_margin="1dp"
                                 android:layout_weight="1"
                                 android:onClick="onButtonClicked"
@@ -233,7 +233,7 @@
 
                             <Button
                                 android:id="@+id/button_2"
-                                style="@style/button_normal"
+                                style="@style/button_normal_land"
                                 android:layout_margin="1dp"
                                 android:layout_weight="1"
                                 android:onClick="onButtonClicked"
@@ -241,7 +241,7 @@
 
                             <Button
                                 android:id="@+id/button_3"
-                                style="@style/button_normal"
+                                style="@style/button_normal_land"
                                 android:layout_margin="1dp"
                                 android:layout_weight="1"
                                 android:onClick="onButtonClicked"
@@ -256,7 +256,7 @@
 
                             <Button
                                 android:id="@+id/button_0"
-                                style="@style/button_normal"
+                                style="@style/button_normal_land"
                                 android:layout_margin="1dp"
                                 android:layout_weight="2.03"
                                 android:onClick="onButtonClicked"
@@ -264,7 +264,7 @@
 
                             <Button
                                 android:id="@+id/button_dot"
-                                style="@style/button_normal"
+                                style="@style/button_normal_land"
                                 android:layout_margin="1dp"
                                 android:layout_weight="1"
                                 android:onClick="onButtonClicked"
@@ -282,25 +282,25 @@
 
                         <Button
                             android:id="@+id/button_equal"
-                            style="@style/button_accent"
+                            style="@style/button_accent_land"
                             android:layout_height="match_parent"
                             android:layout_margin="1dp"
                             android:layout_weight="1"
                             android:onClick="onButtonClicked"
                             android:text="@string/equal" />
                     </LinearLayout>
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/debug_area"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:padding="5dp"
-                    android:textColor="#fff"
-                    android:text=""
-                    />
-
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/debug_area"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:textColor="#fff"
+                android:text=""
+                />
+
+        </LinearLayout>
 
         </ScrollView>
     </LinearLayout>
