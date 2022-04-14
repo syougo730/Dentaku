@@ -5,10 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        >
 
     <TableLayout
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/dentaku_table"
         tools:ignore="MissingConstraints">
         <TableRow
@@ -69,7 +74,6 @@
                 android:onClick="onButtonClicked"
                 tools:ignore="OnClick"
                 android:text="@string/back"
-                android:layout_weight="1"
                 />
             <Button
                 android:id="@+id/button_divide"
@@ -79,7 +83,6 @@
                 android:onClick="onButtonClicked"
                 tools:ignore="OnClick"
                 android:text="@string/divide"
-                android:layout_weight="1"
                 />
             <Button
                 android:id="@+id/button_times"
@@ -89,7 +92,6 @@
                 android:onClick="onButtonClicked"
                 tools:ignore="OnClick"
                 android:text="@string/times"
-                android:layout_weight="1"
                 />
         </TableRow>
         <TableRow
@@ -141,7 +143,6 @@
                 android:onClick="onButtonClicked"
                 tools:ignore="OnClick"
                 android:text="@string/button_8"
-                android:layout_weight="1"
                 />
             <Button
                 android:id="@+id/button_9"
@@ -151,7 +152,6 @@
                 android:onClick="onButtonClicked"
                 tools:ignore="OnClick"
                 android:text="@string/button_9"
-                android:layout_weight="1"
                 />
             <Button
                 android:id="@+id/button_minus"
@@ -161,7 +161,6 @@
                 android:onClick="onButtonClicked"
                 tools:ignore="OnClick"
                 android:text="@string/minus"
-                android:layout_weight="1"
                 />
         </TableRow>
         <TableRow
@@ -187,7 +186,6 @@
                 android:onClick="onButtonClicked"
                 tools:ignore="OnClick"
                 android:text="@string/button_5"
-                android:layout_weight="1"
                 />
             <Button
                 android:id="@+id/button_6"
@@ -197,7 +195,6 @@
                 android:onClick="onButtonClicked"
                 tools:ignore="OnClick"
                 android:text="@string/button_6"
-                android:layout_weight="1"
                 />
             <Button
                 android:id="@+id/button_plus"
@@ -207,7 +204,6 @@
                 android:onClick="onButtonClicked"
                 tools:ignore="OnClick"
                 android:text="@string/plus"
-                android:layout_weight="1"
                 />
         </TableRow>
         <TableRow
@@ -222,8 +218,8 @@
                 android:layout_margin="5dp"
                 android:onClick="onButtonClicked"
                 tools:ignore="OnClick"
-                android:text="@string/button_1"
                 android:layout_weight="1"
+                android:text="@string/button_1"
                 />
             <Button
                 android:id="@+id/button_2"
@@ -233,7 +229,6 @@
                 android:onClick="onButtonClicked"
                 tools:ignore="OnClick"
                 android:text="@string/button_2"
-                android:layout_weight="1"
                 />
             <Button
                 android:id="@+id/button_3"
@@ -243,7 +238,6 @@
                 android:onClick="onButtonClicked"
                 tools:ignore="OnClick"
                 android:text="@string/button_3"
-                android:layout_weight="1"
                 />
             <Button
                 android:id="@+id/button_equal"
@@ -253,7 +247,6 @@
                 android:onClick="onButtonClicked"
                 tools:ignore="OnClick"
                 android:text="@string/equal"
-                android:layout_weight="1"
                 />
         </TableRow>
         <TableRow
@@ -268,30 +261,32 @@
                 android:layout_margin="5dp"
                 android:onClick="onButtonClicked"
                 tools:ignore="OnClick"
-                android:text="@string/button_0"
                 android:layout_weight="1"
+                android:text="@string/button_0"
                 />
-<!--            <Button-->
-<!--                android:id="@+id/button_dot"-->
-<!--                android:layout_width="wrap_content"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="5dp"-->
-<!--                android:onClick="onButtonClicked"-->
-<!--                tools:ignore="OnClick"-->
-<!--                android:text="@string/button_dot"-->
-<!--                android:layout_weight="1"-->
-<!--                />-->
-            <Space
-                android:layout_weight="1"/>
-            <Space
-                android:layout_weight="1">
-            </Space>
-            <Space
-                android:layout_weight="1">
-            </Space>
+            <Button
+                android:id="@+id/button_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:onClick="onButtonClicked"
+                tools:ignore="OnClick"
+                android:text="@string/button_dot"
+                />
+            <Space></Space>
+            <Space></Space>
         </TableRow>
 
     </TableLayout>
 
 
+    <TextView
+        android:id="@+id/debug_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text=""
+        tools:ignore="ExtraText,MissingConstraints" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,6 +6,7 @@ import android.text.Editable
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,7 +23,8 @@ class MainActivity : AppCompatActivity() {
                 if(result.text != null){
                     val calc = Calc((result.text).toString())
                     println("calc = ${calc.rpn_result}")
-                    result.setText(calc.rpn_result.toString())
+                    result.setText(calc.rpn_result)
+                    findViewById<TextView>(R.id.debug_area).text = calc.debug()//デバッグ用
                 }
             }
             "←" ->{

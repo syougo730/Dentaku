@@ -11,11 +11,10 @@ import java.util.*
 class Calc(text:String) {
 
     val formula:String = text //通常の計算式 1 + 2
-    //var rpn_formula:String //RPNでの式 1 2 +
-    var rpn_result:Int //RPNでの計算解
+    val rpn_formula:String = getRpnFormula() //RPNでの式 1 2 +
+    var rpn_result:String //RPNでの計算解
 
     init{
-        //rpn_formula = getRpnFormula()
         rpn_result = rpnCalc()
     }
 
@@ -31,6 +30,7 @@ class Calc(text:String) {
         val resultBuilder = StringBuilder()
         val stack: Deque<Char> = ArrayDeque()
         var calcFlag = false
+        val format = "%,.2f"
 
         for (token:Char in sequenceList){
             when (token) {
@@ -73,7 +73,7 @@ class Calc(text:String) {
                         resultBuilder.append(workStack.removeFirst())
                     }
                 }
-
+                ','-> ""//なにもしない
                 // 数値の場合
                 else -> resultBuilder.append(token)
             }
@@ -90,15 +90,15 @@ class Calc(text:String) {
 
     /**
      * RPN式を計算して返す
-     * @return Int
+     * @return Double
      */
-    fun rpnCalc(): Int {
+    fun rpnCalc(): String {
         var data = getRpnFormula().split(' ') //RPN式を分解して配列に
-        val stack: Deque<Int> = ArrayDeque() //スタックしておく場所
+        val stack: Deque<Double> = ArrayDeque() //スタックしておく場所
 
         data.forEach{
-            if(it.toIntOrNull() != null){
-                stack.add(it.toInt())
+            if(it.toDoubleOrNull() != null){
+                stack.add(it.toDouble())
             }else {
                 val val1 = stack.removeLast()
                 val val2 = stack.removeLast()
@@ -107,10 +107,20 @@ class Calc(text:String) {
                     "-"-> stack.add(val1 - val2)
                     "*"-> stack.add(val1 * val2)
                     "/"-> stack.add(val2 / val1)
+                    else-> return "ERROR"
                 }
             }
         }
-        return stack.first
+        return "%.2f".format(stack.first)
     }
 
+
+    fun debug():String{
+        var text = "---------------------------\n"
+            text += "式： $formula \n"
+            text += "RPN式： $rpn_formula \n"
+            text += "解： $rpn_result \n"
+            text += "---------------------------\n"
+        return text
+    }
 }
