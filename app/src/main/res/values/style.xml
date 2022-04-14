@@ -40,26 +40,26 @@
     <style name="button_normal_land">
         <item name="backgroundTint">@color/dark_gray</item>
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_height">54dp</item>
         <item name="cornerRadius">0dp</item>
-        <item name="android:textSize">30dp</item>
+        <item name="android:textSize">26dp</item>
     </style>
 
     <style name="button_light_land">
         <item name="backgroundTint">@color/light_gray</item>
         <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_height">54dp</item>
         <item name="android:radius">0dp</item>
         <item name="android:textColor">#111</item>
         <item name="cornerRadius">0dp</item>
-        <item name="android:textSize">30dp</item>
+        <item name="android:textSize">26dp</item>
     </style>
 
     <style name="button_accent_land">
         <item name="backgroundTint">@color/orange</item>
-        <item name="android:layout_height">60dp</item>
+        <item name="android:layout_height">54dp</item>
         <item name="android:layout_width">0dp</item>
         <item name="cornerRadius">0dp</item>
-        <item name="android:textSize">30dp</item>
+        <item name="android:textSize">40dp</item>
     </style>
 </resources>
