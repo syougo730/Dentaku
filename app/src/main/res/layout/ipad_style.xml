@@ -39,10 +39,8 @@
             <Button
                 android:id="@+id/button_ac"
                 style="@style/button_light"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_margin="1dp"
-                android:layout_weight="1"
+                android:layout_weight="3.05"
                 android:onClick="onButtonClicked"
                 android:text="@string/button_clear" />
 <!--            <Button-->
@@ -70,9 +68,8 @@
             <Button
                 android:id="@+id/button_back"
                 style="@style/button_light"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_margin="1dp"
+                android:layout_weight="1"
                 android:onClick="onButtonClicked"
                 android:text="@string/back" />
         </LinearLayout>
@@ -81,14 +78,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="-10dp"
+            android:layout_marginTop="-11dp"
             >
 
             <Button
                 android:id="@+id/button_arch_start"
                 style="@style/button_normal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:onClick="onButtonClicked"
@@ -97,8 +92,6 @@
             <Button
                 android:id="@+id/button_arch_end"
                 style="@style/button_normal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:onClick="onButtonClicked"
@@ -107,18 +100,16 @@
             <Button
                 android:id="@+id/button_divide"
                 style="@style/button_normal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_margin="1dp"
+                android:layout_weight="1"
                 android:onClick="onButtonClicked"
                 android:text="@string/divide" />
 
             <Button
                 android:id="@+id/button_times"
                 style="@style/button_normal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_margin="1dp"
+                android:layout_weight="1"
                 android:onClick="onButtonClicked"
                 android:text="@string/times" />
 
@@ -127,14 +118,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="-10dp"
+            android:layout_marginTop="-11dp"
             >
 
             <Button
                 android:id="@+id/button_7"
                 style="@style/button_normal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:onClick="onButtonClicked"
@@ -143,27 +132,24 @@
             <Button
                 android:id="@+id/button_8"
                 style="@style/button_normal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_margin="1dp"
+                android:layout_weight="1"
                 android:onClick="onButtonClicked"
                 android:text="@string/button_8" />
 
             <Button
                 android:id="@+id/button_9"
                 style="@style/button_normal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_margin="1dp"
+                android:layout_weight="1"
                 android:onClick="onButtonClicked"
                 android:text="@string/button_9" />
 
             <Button
                 android:id="@+id/button_minus"
                 style="@style/button_normal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_margin="1dp"
+                android:layout_weight="1"
                 android:onClick="onButtonClicked"
                 android:text="@string/minus" />
 
@@ -172,14 +158,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="-10dp"
+            android:layout_marginTop="-11dp"
             >
 
             <Button
                 android:id="@+id/button_4"
                 style="@style/button_normal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
                 android:onClick="onButtonClicked"
@@ -188,26 +172,23 @@
             <Button
                 android:id="@+id/button_5"
                 style="@style/button_normal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_margin="1dp"
+                android:layout_weight="1"
                 android:onClick="onButtonClicked"
                 android:text="@string/button_5" />
 
             <Button
                 android:id="@+id/button_6"
                 style="@style/button_normal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_margin="1dp"
+                android:layout_weight="1"
                 android:onClick="onButtonClicked"
                 android:text="@string/button_6" />
             <Button
                 android:id="@+id/button_plus"
                 style="@style/button_normal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
                 android:layout_margin="1dp"
+                android:layout_weight="1"
                 android:onClick="onButtonClicked"
                 android:text="@string/plus"
                 />
@@ -223,62 +204,60 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_weight="3">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_weight="3"
+                    >
 
                     <Button
                         android:id="@+id/button_1"
                         style="@style/button_normal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:layout_margin="1dp"
+                        android:layout_weight="1"
                         android:onClick="onButtonClicked"
                         android:text="@string/button_1" />
 
                     <Button
                         android:id="@+id/button_2"
                         style="@style/button_normal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:layout_margin="1dp"
+                        android:layout_weight="1"
                         android:onClick="onButtonClicked"
                         android:text="@string/button_2" />
 
                     <Button
                         android:id="@+id/button_3"
                         style="@style/button_normal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:layout_margin="1dp"
+                        android:layout_weight="1"
                         android:onClick="onButtonClicked"
                         android:text="@string/button_3" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:layout_marginTop="-10dp">
+                    android:layout_marginTop="-11dp">
 
                     <Button
                         android:id="@+id/button_0"
                         style="@style/button_normal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:layout_margin="1dp"
+                        android:layout_weight="2.03"
                         android:onClick="onButtonClicked"
                         android:text="@string/button_0" />
 
                     <Button
                         android:id="@+id/button_dot"
                         style="@style/button_normal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
                         android:layout_margin="1dp"
+                        android:layout_weight="1"
                         android:onClick="onButtonClicked"
                         android:text="@string/button_dot" />
 
@@ -289,14 +268,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"
+                android:layout_weight="1"
                 >
 
                 <Button
                     android:id="@+id/button_equal"
                     style="@style/button_accent"
-                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_margin="1dp"
+                    android:layout_weight="1"
                     android:onClick="onButtonClicked"
                     android:text="@string/equal" />
             </LinearLayout>
