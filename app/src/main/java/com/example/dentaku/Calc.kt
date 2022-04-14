@@ -58,8 +58,7 @@ class Calc(text:String) {
                     stack.addFirst(token)
                 }
                 ')' -> {
-                    println(stack)
-                    while (!stack.isEmpty()) {
+                    while (stack.isNotEmpty()) {
                         if(stack.first != '(') {
                             resultBuilder.append(' ')
                             resultBuilder.append(stack.removeFirst())
@@ -90,10 +89,7 @@ class Calc(text:String) {
         var data = getRpnFormula().split(' ') //RPN式を分解して配列に
         val stack: Deque<Double> = ArrayDeque() //スタックしておく場所
 
-        println(" rpnFormula : $rpn_formula ")
-
         data.forEach{
-            println(it)
             if(it.toDoubleOrNull() != null){
                 stack.add(it.toDouble())
             }else if(it.isNotEmpty()) {
@@ -127,10 +123,12 @@ class Calc(text:String) {
             }
         }
 
-        val result = "%.5f".format(stack.first)//下5桁まで
-        val BigDecimal = BigDecimal(result);
-
-        return BigDecimal.stripTrailingZeros().toPlainString()//不要な0は削除
+        if(stack.isNotEmpty()) {
+            val result = "%.5f".format(stack.first)//下5桁まで
+            val BigDecimal = BigDecimal(result);
+            return BigDecimal.stripTrailingZeros().toPlainString()//不要な0は削除
+        }
+        return "ERROR"
     }
 
 
