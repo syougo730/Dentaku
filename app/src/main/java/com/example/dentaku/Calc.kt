@@ -1,6 +1,7 @@
 package com.example.dentaku
 
 import android.widget.EditText
+import java.math.BigDecimal
 import java.util.*
 
 /**
@@ -48,26 +49,24 @@ class Calc(text:String) {
                         calcFlag = false
                     }
                 }
-                '*', '/', '(' -> {
+                '*', '/' -> {
                     resultBuilder.append(' ')
                     stack.addFirst(token)
                     calcFlag = true
                 }
+                '('->{
+                    stack.addFirst(token)
+                }
                 ')' -> {
-                    // 「(」から「)」までの演算子をバッファへ
-                    val list: List<Any> = Arrays.asList(stack.toTypedArray())
-                    val index = list.indexOf('(')
-                    val workStack: Deque<Char> = ArrayDeque()
-                    var i = 0
-                    while (i <= index) {
-                        val c = stack.removeFirst()
-                        if (c != '(') {
-                            workStack.addFirst(c)
+                    println(stack)
+                    while (!stack.isEmpty()) {
+                        if(stack.first != '(') {
+                            resultBuilder.append(' ')
+                            resultBuilder.append(stack.removeFirst())
+                        }else{
+                            stack.remove('(')
+                            break
                         }
-                        i++
-                    }
-                    while (!workStack.isEmpty()) {
-                        resultBuilder.append(workStack.removeFirst())
                     }
                 }
                 ','-> ""//なにもしない
@@ -91,22 +90,47 @@ class Calc(text:String) {
         var data = getRpnFormula().split(' ') //RPN式を分解して配列に
         val stack: Deque<Double> = ArrayDeque() //スタックしておく場所
 
+        println(" rpnFormula : $rpn_formula ")
+
         data.forEach{
+            println(it)
             if(it.toDoubleOrNull() != null){
                 stack.add(it.toDouble())
-            }else {
-                val val1 = stack.removeLast()
-                val val2 = stack.removeLast()
+            }else if(it.isNotEmpty()) {
+                val val1:Double
+                val val2:Double
+                if (!stack.isEmpty()){
+                    val1 = stack.removeLast()
+                }else return "ERROR"
+                if (!stack.isEmpty()){
+                    val2 = stack.removeLast()
+                }else return "ERROR"
                 when(it){
-                    "+"-> stack.add(val1 + val2)
-                    "-"-> stack.add(val1 - val2)
-                    "*"-> stack.add(val1 * val2)
-                    "/"-> stack.add(val2 / val1)
+                    "+"-> {
+                        val result = (val2 + val1)
+                        stack.add(result)
+                    }
+                    "-"-> {
+                        val result = (val2 - val1)
+                        stack.add(result)
+                    }
+                    "*"-> {
+                        val result = (val2 * val1)
+                        stack.add(result)
+                    }
+                    "/"-> {
+                        val result = (val2 / val1)
+                        stack.add(result)
+                    }
                     else-> return "ERROR"
                 }
             }
         }
-        return "%.2f".format(stack.first)
+
+        val result = "%.5f".format(stack.first)//下5桁まで
+        val BigDecimal = BigDecimal(result);
+
+        return BigDecimal.stripTrailingZeros().toPlainString()//不要な0は削除
     }
 
 

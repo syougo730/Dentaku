@@ -36,14 +36,16 @@ class MainActivity : AppCompatActivity() {
             }
             "C" -> result.setText("0")
             else -> {
-                if(result.text.toString() == "0"){//まだ何も入力してないとき
-                    when(button.text){
-                        "-"-> result.text.append(button.text)
-                        "+","*","/"-> result.setText("0")
-                        else-> result.setText(button.text)
+                when(result.text.toString()){
+                    "0"->{//まだ何も入力してないとき
+                        when(button.text){
+                            "-"-> result.text.append(button.text)
+                            "+","*","/"-> result.setText("0")
+                            else-> result.setText(button.text)
+                        }
                     }
-                }else{
-                    result.text.append(button.text)
+                    "ERROR"-> result.setText(button.text) //ERROR表示の時は上書き
+                    else-> result.text.append(button.text)
                 }
             }
         }
