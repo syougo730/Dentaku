@@ -11,7 +11,8 @@ import android.widget.TextView
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        //setContentView(R.layout.activity_main)
+        setContentView(R.layout.ipad_style)
     }
 
     fun onButtonClicked(view: View){
@@ -24,15 +25,26 @@ class MainActivity : AppCompatActivity() {
                     val calc = Calc((result.text).toString())
                     println("calc = ${calc.rpn_result}")
                     result.setText(calc.rpn_result)
-                    findViewById<TextView>(R.id.debug_area).text = calc.debug()//デバッグ用
+                    //デバッグ用
+                    val debug = calc.debug()
+                    findViewById<TextView>(R.id.debug_area).text = debug
+                    println(debug)
                 }
             }
             "←" ->{
                 result.text = result.text.dropLast(1) as Editable?//1文字戻る
             }
-            "C" -> result.text = null
+            "C" -> result.setText("0")
             else -> {
-                result.text.append(button.text)
+                if(result.text.toString() == "0"){//まだ何も入力してないとき
+                    when(button.text){
+                        "-"-> result.text.append(button.text)
+                        "+","*","/"-> result.setText("0")
+                        else-> result.setText(button.text)
+                    }
+                }else{
+                    result.text.append(button.text)
+                }
             }
         }
 

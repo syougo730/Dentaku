@@ -24,13 +24,10 @@ class Calc(text:String) {
      */
     private fun getRpnFormula(): String {
 
-        println("formula = $formula")
-
         val sequenceList: CharArray = formula.toCharArray()
         val resultBuilder = StringBuilder()
         val stack: Deque<Char> = ArrayDeque()
         var calcFlag = false
-        val format = "%,.2f"
 
         for (token:Char in sequenceList){
             when (token) {
@@ -79,12 +76,10 @@ class Calc(text:String) {
             }
         }
         //スタックしたものを追加する
-        println(stack)
         while (!stack.isEmpty()) {
             resultBuilder.append(' ')
             resultBuilder.append(stack.removeFirst())
         }
-        println("RPNformula = $resultBuilder")
         return resultBuilder.toString()
     }
 
