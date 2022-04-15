@@ -99,5 +99,52 @@
         <item name="android:typeface">monospace</item>
     </style>
 
+    <!--  Xperia Style ( GridLayout -landscape- )  -->
+
+    <style name="button_xp_normal_land">
+        <item name="backgroundTint">@color/button_gray</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="cornerRadius">100dp</item>
+        <item name="android:textSize">32dp</item>
+    </style>
+    <style name="button_xp_equal_land">
+        <item name="backgroundTint">@color/ultra_light_blue</item>
+        <item name="android:textColor">#111</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="cornerRadius">100dp</item>
+        <item name="android:textSize">32dp</item>
+    </style>
+    <style name="button_xp_clear_land">
+        <item name="backgroundTint">@color/light_green</item>
+        <item name="android:textColor">#111</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="cornerRadius">100dp</item>
+        <item name="android:textSize">32dp</item>
+    </style>
+    <style name="button_xp_symbol_land">
+        <item name="backgroundTint">@color/light_blue</item>
+        <item name="android:textColor">#111</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">2dp</item>
+        <item name="cornerRadius">100dp</item>
+        <item name="android:textSize">32dp</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
 
 </resources>
