@@ -10,4 +10,9 @@
     <color name="orange">#ff6924</color>
     <color name="light_gray">#D5D5D5</color>
     <color name="dark_gray">#535353</color>
+    <color name="button_gray">#292929</color>
+    <color name="light_green">#A9EF96</color>
+    <color name="light_blue">#4E97ED</color>
+    <color name="ultra_light_blue">#D1DEED</color>
+    <color name="gray">#464646</color>
 </resources>

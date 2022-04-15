@@ -12,7 +12,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //setContentView(R.layout.activity_main)
-        setContentView(R.layout.ipad_style)
+        //setContentView(R.layout.ipad_style)
+        setContentView(R.layout.xperia_style)
     }
 
     fun onButtonClicked(view: View){
