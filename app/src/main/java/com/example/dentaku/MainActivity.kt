@@ -24,12 +24,10 @@ class MainActivity : AppCompatActivity() {
             "=" -> {
                 if(result.text != null){
                     val calc = Calc((result.text).toString())
-                    println("calc = ${calc.rpn_result}")
                     result.setText(calc.rpn_result)
                     //デバッグ用
                     val debug = calc.debug()
                     findViewById<TextView>(R.id.debug_area).text = debug
-                    println(debug)
                 }
             }
             "←" ->{
